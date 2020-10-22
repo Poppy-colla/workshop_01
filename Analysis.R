@@ -9,7 +9,7 @@ library(tidyverse)
 
 chaffs <- pivot_longer(data = chaff, cols = everything(), values_to = "Mass", names_to = "Sex")
   
-# Summarising to find difference in mass between male and female chaffinches 
+# Summarizing to find difference in mass between male and female chaffinches 
 
 chaffs %>% group_by(name) %>%
   summarise(Mean = mean(Mass))
